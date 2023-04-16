@@ -22,7 +22,7 @@ function App() {
           <GenreList />
         </GridItem>
       </Show>
-      <GridItem area={"main"}>
+      <GridItem area={"main"} paddingX={2}>
         <GameGrid />
       </GridItem>
     </Grid>
