@@ -19,8 +19,9 @@ export interface Game {
   parent_platforms: { platform: Platform }[];
 }
 
-const useGames = (gameQuery: GameQuery) =>
-  useData<Game>(
+const useGames = (gameQuery: GameQuery) => {
+  console.log(gameQuery);
+  return useData<Game>(
     "/games",
     {
       params: {
@@ -31,5 +32,5 @@ const useGames = (gameQuery: GameQuery) =>
     },
     [gameQuery]
   );
-
+};
 export default useGames;
